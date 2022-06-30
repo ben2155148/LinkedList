@@ -12,33 +12,41 @@ struct ListNode {
     ListNode(int x, ListNode * next) : val(x), next(next) {}
 };
 
-class Solution {
+class LinkedList {
     public: 
-    bool isPalindrome(ListNode * head) {
-        //idea: reverse the singly linked list and compare first list
-        
-        //test to see if modules/everything is set up correctly
-        bool palindrome = true;
-            
-        ListNode * ptr = head;
-        while(ptr != nullptr) {
-            ListNode temp = *ptr;
-            cout << temp.val << endl;
-            ptr = temp.next;
+    ListNode * head;
+    LinkedList() { head = NULL; }
+
+    void print() {
+        ListNode * temp = head;
+        while(temp != nullptr) {
+            cout << temp->val << " ";
+            temp = temp->next;
         }
+    }
+
+    void push(int val) {
+        ListNode * temp = new ListNode(val);
+        temp->next = head;
+        head = temp;
+    }
+
+    bool isPalindrome(LinkedList list) {
+        bool palindrome = true;
+
 
         return palindrome;
     }
 };
 
 int main() {
-    Solution soln;
-    ListNode n3(1); 
-    ListNode n2(2, &n3);
-    ListNode n1(2, &n2);
-    ListNode head(1, &n1);
+    LinkedList list; 
+    list.push(1);
+    list.push(2);
+    list.push(3);
+    list.push(4);
 
-    soln.isPalindrome(&head);
+    list.print();
 
     return 0;
 }
