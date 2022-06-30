@@ -34,6 +34,9 @@ class LinkedList {
     bool isPalindrome(LinkedList list) {
         bool palindrome = true;
 
+        LinkedList reversed;
+
+        
 
         return palindrome;
     }
