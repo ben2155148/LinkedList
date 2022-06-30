@@ -7,7 +7,7 @@ CC = g++
 CFLAGS = -g -Wall 
 
 # build target
-TARGET = PLL
+TARGET = LinkedList
 
 all: $(TARGET)
 

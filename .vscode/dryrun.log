@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/ben/Documents/LeetCode/PalindromeLinkedList'
+g++ -g -Wall  -o LinkedList LinkedList.cpp
+make: Leaving directory '/home/ben/Documents/LeetCode/PalindromeLinkedList'
+ 
