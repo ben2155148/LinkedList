@@ -69,15 +69,38 @@ class LinkedList {
 
         return palindrome;
     }
+
+    void sortList() {
+        //TODO: implement a sorting algorithm!
+    }
 };
 
 int main() {
-    LinkedList list; 
-    list.push(1);
-    list.push(2);
-    list.push(2);
-    list.push(1);
+    LinkedList palindromeList; 
+    palindromeList.push(1);
+    palindromeList.push(2);
+    palindromeList.push(2);
+    palindromeList.push(1);
     
+    cout << "Original List: ";
+    palindromeList.print();
+
+    cout << "Reversed List: ";
+    palindromeList.reverse();
+    palindromeList.print();
+
+    cout << "Is the list a palindrome? ";
+    cout << palindromeList.isPalindrome(palindromeList) << endl;
+    
+    cout << endl;
+
+    LinkedList list;
+    list.push(1);
+    list.push(2);
+    list.push(3);
+    list.push(4);
+    list.push(5);
+
     cout << "Original List: ";
     list.print();
 
